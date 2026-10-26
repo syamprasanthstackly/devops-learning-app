@@ -15,6 +15,21 @@ class AppHandler(BaseHTTPRequestHandler):
             self.wfile.write(b'{"status":"healthy"}')
             return
 
+        if self.path == "/info":
+            import json
+
+            response = {
+                "application": APP_NAME,
+                "environment": APP_ENV,
+                "version": "1.0.0",
+            }
+
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(response).encode("utf-8"))
+            return
+
         if self.path != "/":
             self.send_response(404)
             self.end_headers()
