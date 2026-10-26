@@ -46,7 +46,8 @@ class AppHandler(BaseHTTPRequestHandler):
                 <p>Environment: {APP_ENV}</p>
                 <p>Status: Application is running!</p>
                 <p>Built with Python, GitHub, and DevOps practices.</p>
-                <p>Health endpoint: /health</p>
+                <p>Changes are validated through GitHub Actions CI.</p>   
+            <p>Health endpoint: /health</p>
             </body>
         </html>
         """
