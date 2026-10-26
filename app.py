@@ -2,7 +2,7 @@ import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 APP_NAME = "DevOps Learning App"
-APP_ENV = os.getenv("APP_ENV", "development")
+APP_ENV = os.getenv("APP_ENV", "local")
 PORT = int(os.getenv("PORT", "8000"))
 
 
